@@ -30,5 +30,23 @@ namespace UserRegistrationRegex
             }
 
         }
+        public void ValidateLastName()
+        {
+            Console.WriteLine("Enter Last Name : ");
+            string Name = Console.ReadLine();
+
+            string LastName = "^[A-Z]{1}[a-zA-Z]{6,}$";
+            Regex reg = new Regex(LastName);
+
+            if (reg.IsMatch(Name))
+            {
+                Console.WriteLine("Last Name is valid");
+            }
+            else
+            {
+                Console.WriteLine("Verify Last Name Again");
+            }
+        }
     }
 }
+    
