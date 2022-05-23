@@ -12,5 +12,8 @@ class Program
 
         Validation validation1 = new Validation();
         validation1.ValidateLastName();
+
+        Validation validation2 = new Validation();
+        validation2.ValidateEmail();
     }
 }
