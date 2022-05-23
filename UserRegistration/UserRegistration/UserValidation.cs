@@ -47,6 +47,24 @@ namespace UserRegistrationRegex
                 Console.WriteLine("Verify Last Name Again");
             }
         }
+        public void ValidateEmail()
+        {
+            Console.WriteLine("Enter Email ID : ");
+            string email = Console.ReadLine();
+
+            string emailID = "^[0-9a-z]+[.+-_]{0,1}[0-9a-z]+[@][a-z]+[.][a-z]{2,3}([.][a-z]{2,3}){0,1}$";
+            Regex reg = new Regex(emailID);
+
+            if (reg.IsMatch(email))
+            {
+                Console.WriteLine("E-mail ID is valid");
+            }
+            else
+            {
+                Console.WriteLine("Invalid E-mail Id");
+            }
+
+        }
     }
 }
     
