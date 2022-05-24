@@ -83,6 +83,23 @@ namespace UserRegistrationRegex
             }
 
         }
+        public void ValidatePassword()
+        {
+            Console.WriteLine("Enter Password : ");
+            string password = Console.ReadLine();
+
+            string PASSWORD_REGEX = "^[a-zA-z]{8,}$";
+            Regex reg = new Regex(PASSWORD_REGEX);
+
+            if (reg.IsMatch(password))
+            {
+                Console.WriteLine("Password is valid");
+            }
+            else
+            {
+                Console.WriteLine("Verify Password Again");
+            }
+        }
     }
 }
     
