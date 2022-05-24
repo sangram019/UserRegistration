@@ -100,6 +100,23 @@ namespace UserRegistrationRegex
                 Console.WriteLine("Verify Password Again");
             }
         }
+        public void ValidatePassword1()
+        {
+            Console.WriteLine("Enter Password : ");
+            string password = Console.ReadLine();
+
+            string PASSWORD = "^[A-Z]{1}[a-z]{8,}$";
+            Regex reg = new Regex(PASSWORD);
+
+            if (reg.IsMatch(password))
+            {
+                Console.WriteLine("Password is valid");
+            }
+            else
+            {
+                Console.WriteLine("Verify Password Again");
+            }
+        }
     }
 }
     
