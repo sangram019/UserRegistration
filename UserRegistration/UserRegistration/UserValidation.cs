@@ -98,12 +98,12 @@ namespace UserRegistrationRegex
         public void ValidatePassword2()
         {
             Console.WriteLine("Enter Password : ");
-            string password = Console.ReadLine();
+            string password1 = Console.ReadLine();
 
             string PASSWORD = "^[A-Z]{1}[a-z]{8,}$";
             Regex reg = new Regex(PASSWORD);
 
-            if (reg.IsMatch(password))
+            if (reg.IsMatch(password1))
             {
                 Console.WriteLine("Password is valid");
             }
@@ -115,9 +115,26 @@ namespace UserRegistrationRegex
         public void ValidatePassword3()
         {
             Console.WriteLine("Enter Password : ");
-            string password = Console.ReadLine();
+            string password2 = Console.ReadLine();
 
             string PASSWORD = "^[a-zA-z0-9]{8,}$";
+            Regex reg = new Regex(PASSWORD);
+
+            if (reg.IsMatch(password2))
+            {
+                Console.WriteLine("Password is valid");
+            }
+            else
+            {
+                Console.WriteLine("Verify Password Again");
+            }
+        }
+        public void ValidatePassword4()
+        {
+            Console.WriteLine("Enter Password : ");
+            var password = Console.ReadLine();
+
+            var PASSWORD = "^(?=.[0-9])(?=.[a-z])(?=.[A-Z])(?=.[*.!@$%^&(){}[]:;<>,.?/~_+-=).{8,32}$";
             Regex reg = new Regex(PASSWORD);
 
             if (reg.IsMatch(password))

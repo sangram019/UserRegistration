@@ -26,5 +26,8 @@ class Program
         
                 Validation validation6 = new Validation();
                 validation6.ValidatePassword3();
+
+                Validation validation7 = new Validation();
+                validation7.ValidatePassword4();
     }
 }
